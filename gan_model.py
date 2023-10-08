@@ -10,7 +10,7 @@ class gan_discriminator(nn.Module):
             nn.Linear(256, 256),
             nn.LeakyReLU(0.2),
             nn.Linear(256, 1),
-            nn.Sigmoid()
+            nn.Sigmoid()  # the prediction result is limited between 0 and 1
         )
 
     def forward(self, x):
